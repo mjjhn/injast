@@ -1,0 +1,193 @@
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: var(--space-4);
+}
+.input[type="checkbox"],
+.input[type="radio"] {
+  accent-color: var(--ink);
+}
+.button {
+  min-height: 48px;
+  width: 100%;
+  padding: var(--space-12) var(--space-16);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-8);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: var(--text-14);
+  font-weight: 700;
+  line-height: 1.6;
+}
+.button.primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+.button.primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+.button.secondary {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+}
+.button.secondary:hover:not(:disabled) {
+  background: var(--surface-subtle);
+}
+.button.danger {
+  background: var(--danger);
+  color: var(--surface);
+}
+.button.danger:hover:not(:disabled) {
+  background: var(--danger-hover);
+}
+.button.danger-soft {
+  background: var(--danger-surface);
+  border-color: var(--danger-border);
+  color: var(--danger);
+}
+.button.danger-soft:hover:not(:disabled) {
+  background: var(--danger-soft-hover);
+  border-color: var(--danger-border-hover);
+}
+.button.ghost {
+  background: transparent;
+  color: inherit;
+  border-color: transparent;
+}
+.button:disabled {
+  background: var(--disabled-surface);
+  color: var(--disabled-ink);
+}
+.button.icon-button {
+  width: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--surface-muted);
+  flex-shrink: 0;
+}
+.button.icon-button:hover:not(:disabled) {
+  background: var(--surface-subtle);
+}
+.button.icon-button:disabled {
+  opacity: 0.4;
+}
+.button.text-button {
+  width: auto;
+  min-height: 44px;
+  padding: 0;
+  font-size: var(--text-12);
+  justify-self: start;
+}
+.field {
+  display: grid;
+  gap: var(--space-4);
+}
+.field > label {
+  font-size: var(--text-12);
+  font-weight: 650;
+  margin-bottom: var(--space-4);
+}
+.input:not([type="checkbox"]):not([type="radio"]),
+.button.date-trigger {
+  width: 100%;
+  min-height: 48px;
+  min-width: 0;
+  padding: var(--space-12);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: var(--text-16);
+  font-weight: 400;
+}
+.input::placeholder {
+  color: var(--placeholder);
+}
+.input:not(:disabled):hover,
+.button.date-trigger:hover {
+  border-color: var(--control-hover-border);
+}
+.input[aria-invalid="true"],
+.button.date-trigger[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+.input:disabled {
+  background: var(--surface-muted);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+.amount-input {
+  position: relative;
+}
+.amount-input .input:not([type="checkbox"]):not([type="radio"]) {
+  padding-left: var(--space-52);
+  padding-right: var(--space-12);
+  direction: ltr;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.amount-input > span {
+  position: absolute;
+  left: var(--space-12);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--text-11);
+  color: var(--muted);
+  pointer-events: none;
+}
+.button.date-trigger {
+  justify-content: space-between;
+  gap: var(--space-8);
+  text-align: right;
+}
+.date-trigger svg {
+  color: var(--control-icon);
+}
+.money {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  font-variant-numeric: tabular-nums;
+  flex-wrap: wrap;
+  white-space: normal;
+  max-width: 100%;
+}
+.money bdi {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.currency {
+  font-size: var(--text-11);
+  font-weight: 400;
+}
+.status-badge {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  background: var(--background);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-10);
+}

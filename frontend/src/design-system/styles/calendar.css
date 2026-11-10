@@ -1,0 +1,143 @@
+.calendar-popover {
+  z-index: var(--layer-popover);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: var(--space-12);
+  border-radius: var(--radius);
+  width: min(328px, calc(100vw - 24px));
+}
+.calendar-popover .rdp-root {
+  --rdp-day_button-border-radius: var(--radius);
+  --rdp-week_number-border-radius: var(--radius);
+  --rdp-accent-color: var(--accent-strong);
+  --rdp-accent-background-color: var(--accent-surface);
+  --rdp-day-width: 40px;
+  --rdp-day-height: 40px;
+  font-size: var(--text-12);
+  width: 100%;
+}
+.calendar-popover .rdp-months {
+  justify-content: center;
+}
+.calendar-hint {
+  text-align: center;
+  font-size: var(--text-10);
+  color: var(--muted);
+  margin-top: var(--space-8);
+}
+.calendar-popover[data-view="years"] .calendar-hint {
+  color: var(--accent-strong);
+  font-weight: 650;
+}
+.icon-button:disabled,
+.calendar-nav:disabled,
+.calendar-choices button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.calendar-positioner {
+  z-index: var(--layer-popover);
+  width: min(328px, calc(100vw - 24px));
+  height: 400px;
+  max-height: min(400px, var(--radix-popover-content-available-height));
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+.calendar-positioner[data-side="top"] {
+  justify-content: flex-end;
+}
+.calendar-popover {
+  width: 100%;
+  height: 400px;
+  max-height: 100%;
+  min-height: 0;
+  flex-shrink: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-shadow: 0 12px 32px var(--popover-shadow);
+}
+.calendar-header {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+.calendar-header h2 {
+  flex: 1;
+  font-size: var(--text-13);
+}
+.calendar-nav,
+.calendar-caption,
+.calendar-choices button {
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: var(--background);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  font-size: var(--text-12);
+}
+.calendar-nav {
+  width: 44px;
+  flex-shrink: 0;
+}
+.calendar-caption {
+  flex: 1;
+  padding: var(--space-4);
+  background: var(--surface);
+}
+.calendar-choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-8);
+}
+.calendar-choices button[aria-pressed="true"] {
+  background: var(--accent-strong);
+  color: var(--surface);
+  font-weight: 700;
+}
+.calendar-choices button:hover:not(:disabled):not([aria-pressed="true"]),
+.calendar-caption:hover,
+.calendar-nav:hover:not(:disabled) {
+  background: var(--accent-surface);
+}
+.calendar-popover .rdp-root {
+  --rdp-day-width: auto;
+  --rdp-day-height: 44px;
+  --rdp-day_button-width: 100%;
+  --rdp-day_button-height: 44px;
+}
+.calendar-popover .rdp-months,
+.calendar-popover .rdp-month {
+  width: 100%;
+  max-width: none;
+}
+.calendar-popover .rdp-month_grid {
+  width: 100%;
+  table-layout: fixed;
+}
+.calendar-popover .rdp-day_button {
+  max-width: 44px;
+  margin-inline: auto;
+}
+.calendar-popover .rdp-weekday {
+  padding-block: var(--space-8);
+}
+.calendar-popover .rdp-selected .rdp-day_button {
+  background: var(--accent-strong);
+  color: var(--surface);
+}
+.calendar-popover .rdp-day_button:hover:not(:disabled) {
+  outline: 1px solid var(--accent);
+}
+.calendar-popover[data-view="months"] {
+  height: 320px;
+}
+.calendar-popover[data-view="years"] {
+  height: 172px;
+}

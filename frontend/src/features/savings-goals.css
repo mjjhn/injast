@@ -1,0 +1,480 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.wallet-card {
+  background: var(--inverse-surface);
+  color: var(--surface);
+  padding: var(--space-20);
+  border-radius: var(--radius);
+  position: relative;
+}
+.wallet-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--inverse-muted);
+  font-size: var(--text-12);
+}
+.wallet-card p {
+  font-size: var(--text-11);
+  color: var(--inverse-secondary);
+}
+.section-intro {
+  padding: var(--space-24) 0 var(--space-16);
+}
+.section-intro p,
+.form-intro p {
+  font-size: var(--text-12);
+  color: var(--muted);
+  margin-top: var(--space-4);
+}
+.tabs {
+  display: flex;
+  padding: var(--space-4);
+  border-radius: var(--radius);
+  background: var(--tabs-surface);
+  margin-bottom: var(--space-16);
+  gap: var(--space-4);
+}
+.goals-list {
+  display: grid;
+  gap: var(--space-12);
+}
+.goal-row {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: var(--space-16);
+}
+.goal-row:hover {
+  border-color: var(--border-hover);
+}
+.goal-heading {
+  display: flex;
+  gap: var(--space-12);
+  align-items: center;
+}
+.goal-heading h2 {
+  font-size: var(--text-15);
+}
+.goal-heading .muted {
+  font-size: var(--text-10);
+}
+.goal-symbol {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  align-items: center;
+  justify-content: center;
+  background: var(--icon-surface);
+  color: var(--icon-ink);
+  flex-shrink: 0;
+}
+.row-arrow {
+  margin-inline-start: auto;
+  color: var(--icon-muted);
+}
+.goal-amounts {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-16);
+}
+.goal-amounts > .muted {
+  font-size: var(--text-11);
+}
+.muted {
+  color: var(--muted);
+}
+.progress-block {
+  margin-block: var(--space-12);
+}
+.progress-caption {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-10);
+  color: var(--muted);
+  margin-bottom: var(--space-8);
+}
+.progress-caption strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+.progress-track {
+  height: 6px;
+  background: var(--divider);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.progress-track > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius);
+}
+.goal-deadline {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-8);
+  font-size: var(--text-10);
+  color: var(--muted);
+  border-top: 1px solid var(--divider);
+  padding-top: var(--space-12);
+}
+.bottom-note {
+  font-size: var(--text-10);
+  text-align: center;
+  color: var(--muted);
+  padding-top: var(--space-24);
+}
+.empty-state {
+  min-height: 220px;
+  text-align: center;
+  padding: var(--space-36) var(--space-20);
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.empty-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius);
+  background: var(--icon-surface);
+  color: var(--accent);
+  margin-bottom: var(--space-16);
+}
+.empty-state p {
+  font-size: var(--text-12);
+  color: var(--muted);
+  margin-top: var(--space-8);
+}
+.form-intro {
+  padding: var(--space-8) 0 var(--space-24);
+}
+.intro-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-16);
+  color: var(--accent);
+}
+.form-intro h2 {
+  font-size: var(--text-17);
+}
+.goal-form {
+  display: grid;
+  gap: var(--space-24);
+}
+.source-field {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.source-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+.source-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  min-height: 56px;
+  padding: var(--space-8);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: var(--text-11);
+  background: var(--surface);
+  cursor: pointer;
+}
+.source-option.selected {
+  border-color: var(--accent);
+  background: var(--accent-surface);
+}
+.source-option > svg:last-child {
+  margin-inline-start: auto;
+}
+.terms-block {
+  padding: var(--space-16);
+  background: var(--terms-surface);
+  border-radius: var(--radius);
+}
+.terms-block label {
+  display: flex;
+  gap: var(--space-12);
+  align-items: flex-start;
+  font-size: var(--text-11);
+  cursor: pointer;
+}
+.detail-card {
+  background: var(--surface);
+  padding: var(--space-20);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.detail-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+.detail-card h2 {
+  font-size: var(--text-20);
+  margin-bottom: var(--space-12);
+}
+.detail-card > .muted {
+  font-size: var(--text-11);
+}
+.hero-money {
+  display: flex;
+  font-size: var(--text-28);
+  font-weight: 750;
+  justify-content: center;
+  margin-top: var(--space-4);
+  gap: var(--space-8);
+}
+.target-caption {
+  font-size: var(--text-12);
+  color: var(--muted);
+  margin-top: var(--space-4);
+}
+.detail-card .progress-block {
+  margin-top: var(--space-24);
+  margin-bottom: 0;
+}
+.facts-card {
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: var(--space-12);
+}
+.facts-card > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-8);
+  align-items: center;
+  min-height: 56px;
+  padding: var(--space-12) var(--space-16);
+  border-bottom: 1px solid var(--divider);
+  font-size: var(--text-11);
+}
+.facts-card > div:last-child {
+  border-bottom: 0;
+}
+.facts-card > div > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--muted);
+}
+.facts-card strong {
+  font-size: var(--text-11);
+  font-weight: 600;
+  color: var(--ink);
+  text-align: end;
+}
+.facts-card .money {
+  color: var(--accent-strong);
+  font-weight: 700;
+  justify-content: flex-end;
+  text-align: end;
+}
+.facts-card .money .currency {
+  color: var(--muted);
+  font-weight: 500;
+}
+.available-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+  min-height: 64px;
+  margin-top: var(--space-8);
+  padding: var(--space-12) var(--space-16);
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+.available-row > .money {
+  color: var(--ink);
+  font-size: var(--text-16);
+  font-weight: 750;
+  justify-content: flex-end;
+  text-align: end;
+}
+.available-row > .money .currency {
+  color: var(--muted);
+  font-size: var(--text-11);
+  font-weight: 500;
+}
+.available-row > span:first-child {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+  color: var(--muted);
+  font-size: var(--text-11);
+}
+
+.notice {
+  font-size: var(--text-12);
+  padding: var(--space-12);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-12);
+  background: var(--surface);
+}
+.completed-footer {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  font-size: var(--text-13);
+  font-weight: 650;
+}
+.goal-heading > div {
+  min-width: 0;
+}
+.row-arrow {
+  flex-shrink: 0;
+}
+.form-fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.hero-money {
+  font-size: clamp(21px, 7vw, 28px);
+}
+.facts-card > div,
+.available-row {
+  flex-wrap: wrap;
+}
+.completed-footer:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: var(--space-4);
+  border-radius: var(--radius);
+}
+.form-guidance {
+  margin-bottom: var(--space-8);
+  color: var(--muted);
+  font-size: var(--text-12);
+  line-height: 1.8;
+}
+.cancel-action {
+  margin-top: var(--space-20);
+}
+
+.tabs button {
+  flex: 1;
+  border: 0;
+  min-height: 44px;
+  padding: var(--space-8);
+  border-radius: var(--radius);
+  font-size: var(--text-13);
+  color: var(--text-secondary);
+}
+.tabs button[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 750;
+}
+.source-field legend {
+  font-size: var(--text-12);
+  font-weight: 650;
+  margin-bottom: var(--space-4);
+}
+.source-option input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  inset: 0;
+  cursor: pointer;
+}
+.source-option:has(input:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: var(--space-4);
+}
+.terms-block input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin: 0;
+}
+.goal-heading h2,
+.detail-card h2 {
+  overflow-wrap: anywhere;
+}
+.goal-deadline,
+.bottom-note {
+  font-size: var(--text-11);
+}
+.form-guidance .text-button {
+  color: var(--ink);
+}
+
+/* Keep wallet hierarchy explicit; it was lost in the reference CSS split. */
+.wallet-card > .money {
+  display: flex;
+  margin-block: var(--space-12) var(--space-4);
+  font-size: var(--text-24);
+  font-weight: 700;
+  gap: var(--space-8);
+}
+.deposit-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: var(--space-16);
+  border-radius: var(--radius);
+  margin-top: var(--space-4);
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+.section-heading h2 {
+  font-size: var(--text-14);
+}
+.section-heading .icon-button {
+  width: 32px;
+  height: 32px;
+  min-height: 44px;
+}
+.pending-summary > .money {
+  font-size: var(--text-20);
+  font-weight: 700;
+}
+.pending-summary p {
+  font-size: var(--text-12);
+  color: var(--text-supporting);
+  margin-top: var(--space-8);
+}
+
+.goal-amounts > .money {
+  font-size: var(--text-17);
+  font-weight: 700;
+}
+.facts-card .money,
+.available-row .money {
+  margin-inline-start: auto;
+}

@@ -1,0 +1,24 @@
+# Application outputs (future implementation)
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.test
+*.out
+backend/bin/
+data/
+*.db
+*.db-shm
+*.db-wal
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.tsbuildinfo
+.clean-verification/
+.DS_Store
+
+# Generated acceptance evidence
+artifacts/

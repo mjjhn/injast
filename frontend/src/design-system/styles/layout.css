@@ -1,0 +1,101 @@
+.app-shell {
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--radius);
+  height: 100dvh;
+  margin-inline: auto;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.topbar {
+  flex-shrink: 0;
+  min-height: 88px;
+  padding: var(--space-20) var(--space-16) var(--space-16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--background);
+}
+.eyebrow {
+  font-size: var(--text-11);
+  color: var(--muted);
+  display: block;
+  margin-bottom: var(--space-4);
+}
+.brand-mark {
+  background: var(--surface);
+}
+.page-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 var(--space-16) var(--space-24);
+  scroll-padding: var(--space-24);
+  overscroll-behavior: contain;
+}
+.action-footer {
+  flex-shrink: 0;
+  padding: var(--space-12) var(--space-16)
+    max(var(--space-16), env(safe-area-inset-bottom));
+  background: var(--surface);
+  border-top: 1px solid var(--surface-muted);
+}
+.skip-link {
+  position: fixed;
+  top: -80px;
+  right: 8px;
+  z-index: var(--layer-skip);
+  background: var(--surface);
+  padding: var(--space-8);
+}
+.skip-link:focus {
+  top: 8px;
+}
+@media (min-width: 600px) {
+  .app-shell {
+    height: calc(100dvh - 48px);
+    min-height: 500px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+}
+.topbar > div {
+  min-width: 0;
+}
+.topbar {
+  gap: var(--space-12);
+}
+@media (min-width: 600px) {
+  .app-shell {
+    min-height: 0;
+  }
+}
+@media (max-height: 500px) {
+  .topbar {
+    min-height: 64px;
+    padding-block: var(--space-8);
+  }
+}
+@media (max-height: 500px) {
+  .action-footer {
+    padding-top: var(--space-8);
+    padding-bottom: max(var(--space-8), env(safe-area-inset-bottom));
+  }
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.topbar h1 {
+  overflow-wrap: anywhere;
+}

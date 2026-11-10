@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: var(--text-20);
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+h2 {
+  font-size: var(--text-15);
+  font-weight: 700;
+}
+@media (min-width: 600px) {
+  body {
+    padding: var(--space-24);
+  }
+}
+svg.lucide {
+  flex-shrink: 0;
+  stroke-width: 1.8;
+}
